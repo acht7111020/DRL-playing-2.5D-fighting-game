@@ -33,9 +33,8 @@ If you find the work is useful in your research, please consider citing:
 2. TensorFlow 1.3.0
 
 Download the Web Drivers
-1. PhantomJS - http://phantomjs.org/download.html
-2. ChromeDriver - https://sites.google.com/a/chromium.org/chromedriver/
-3. GeckoDriver (Firefox) - https://github.com/mozilla/geckodriver/releases
+1. Download [PhantomJS](https://www.dropbox.com/s/dhuw71d9l5umk5m/phantomjs?dl=1)
+2. Put to `webdriver/phantomjsdriver_2.1.1_linux64/phantomjs`
 
 Installing PhantomJS in Ubuntu: https://gist.github.com/julionc/7476620
 
@@ -44,6 +43,7 @@ Installing PhantomJS in Ubuntu: https://gist.github.com/julionc/7476620
 ```
 git clone https://github.com/elvisyjlin/lf2gym.git
 ```
+Then follow the [step](https://github.com/elvisyjlin/lf2gym#installation) to prepare LF2 game environment
 
 2. Put `a3c*.py` in this repo beside the file `lf2gym.py`
 
@@ -59,8 +59,11 @@ git clone https://github.com/elvisyjlin/lf2gym.git
 Example:
 
 ```python
-env = lf2gym.make(startServer=True, autoStart=True, rewardList=['hp'], characters=[Character.Firen, Character.Davis],
-    url='http://127.0.0.1:[YOURPORT]', serverPort=[YOURPORT])
+env = lf2gym.make(
+        startServer=True,
+        difficulty=Difficulty.Challengar,
+        characters=[Character.Firen, Character.Freeze],
+        port=[YOURPORT])
 ```
 
 ### Control and play with pre-trained agent
